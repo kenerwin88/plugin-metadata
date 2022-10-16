@@ -69,6 +69,7 @@ function transformSelect(param, language) {
 function additionalOptions(param, language) {
     switch (param.type) {
         case 'number': return transformNumber(param);
+        case 'number[]': return transformNumber(param);
         case 'file': return transformFile(param);
         case 'animation': return transformRequire(param);
         case 'boolean': return transformBoolean(param, language);

@@ -129,6 +129,7 @@
           "type": "string",
           "enum": [
             "number",
+            "number[]",
             "file",
             "animation",
             "boolean",
@@ -226,6 +227,31 @@
                 "type": {
                   "type": "string",
                   "const": "number"
+                },
+                "min": {
+                  "description": "Minimum value",
+                  "type": "number"
+                },
+                "max": {
+                  "description": "Maximum value",
+                  "type": "number"
+                },
+                "decimals": {
+                  "description": "Floating point precision. If ommited, the number must be an integer.",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            {
+              "title": "NumberArrayParam",
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "number[]"
                 },
                 "min": {
                   "description": "Minimum value",

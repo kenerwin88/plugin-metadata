@@ -45,7 +45,6 @@ params:
     description: A select
     options:
       - foo
-
       - text: Bar
         value: bar
 
@@ -56,3 +55,9 @@ params:
     options:
       - foo
       - bar
+  - name: number_param_array
+    text: Number param array
+    type: number[]
+    description: A number array
+    min: 0
+    max: 100

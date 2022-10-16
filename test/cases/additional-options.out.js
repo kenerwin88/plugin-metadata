@@ -53,4 +53,11 @@
  * @desc A combo
  * @option foo
  * @option bar
+ * 
+ * @param number_param_array
+ * @type number[]
+ * @text Number param array
+ * @desc A number array
+ * @min 0
+ * @max 100
  */
