@@ -80,8 +80,15 @@ function additionalOptions(param, language) {
 }
 
 function unitType(type, struct) {
-    if (struct) return `struct<${type}>`;
-    else return type;
+
+    if (struct) {
+        if (struct.includes('[]')) {
+            return `struct<${type.replace('[]', '')}>[]`
+        } else {
+            return `struct<${type}>`
+        }
+    }
+    else {return type};
 }
 
 function resolveType(param) {
@@ -99,7 +106,11 @@ function transformParam(param, { command, parent, language }) {
     if (parent) result.push(`@parent ${parent}`);
 
     const type = resolveType(param);
+    
     if (type) result.push(`@type ${type}`);
+
+
+  
 
     result.push(
         `@text ${localized(param.text, language)}`,

@@ -8,6 +8,11 @@
  * @type struct<MyStruct>
  * @text Struct 1
  * @desc A struct.
+ * 
+ * @param structArray
+ * @type struct<MyStruct>[]
+ * @text Array of Struct 1
+ * @desc Array of Struct 1 description
  */
 /*~struct~MyStruct:
  * 

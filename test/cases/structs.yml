@@ -9,7 +9,10 @@ params:
       struct: MyStruct
       text: Struct 1
       description: A struct.
-
+    - name: structArray
+      struct: MyStruct[]
+      text: Array of Struct 1
+      description: Array of Struct 1 description
 structs:
     - name: MyStruct
       params:
